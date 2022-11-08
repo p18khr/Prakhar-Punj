@@ -1,0 +1,31 @@
+{% extends 'ui/main.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    {% for order in orders %}
+    <div class="row justify-content-center">
+        <div class="col-md-2 mt-3 border-left border-top border-bottom" >
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{order.product.product_image.url}}" alt="">
+            </div>
+        </div>
+        <div class="col-md-2 mt-3 border-top border-bottom">
+            <div class="card-body">
+                <h5 class="card-title">Product Name: {{order.product.name}}</h5>
+                <h5 class="card-title">Category: {{order.product.category}}</h5>
+                <p class="card-text">Description: {{order.product.description}}</p>
+                <p class="card-text">Price: {{order.product.price}}</p>
+                <p class="card-text">Qty: {{order.qty}}</p>
+                <p class="card-text">Total: {{order.total}}</p>
+                <p class="card-text">Date: {{order.purchaseon}}</p>
+            </div>
+        </div>
+        <div class="col-md-2 mt-3 d-flex align-items-center border-top border-bottom border-right">
+        <a href="/removefromcart/{{cartitem.id}}/" class="btn btn-warning">Cancel Order</a>
+        </div>
+    </div>
+    {% endfor %}
+    </div><br><br><br><br><br><br><br><br><br>
+    
+</div>
+{% endblock %}

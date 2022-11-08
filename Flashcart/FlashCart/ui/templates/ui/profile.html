@@ -1,0 +1,48 @@
+
+{% extends 'ui/main.html' %}
+{% block content %}
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"> </div>
+            <div class="col-md-4">
+                <div class="login-panel panel panel-default bg-light">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User Profile</h3>
+                    </div>
+                    {%if not message == None %}
+                    <div class="alert alert-{{message.type}}" role="alert">
+                        {{message.message}}
+                    </div>
+                    {%endif%}
+                    <div class="panel-body">
+                        <form role="form" method="POST">
+                            <fieldset>
+                                {% csrf_token %}
+                                {% for field in form %}
+                                <!-- Input:Text -->
+                                <div class="form-group">
+                                    <label for="formInput#text">{{field.label}}: </label>
+                                    {{field}}
+                                    {% if field.help_text %}
+                                    <small>{{field.help_text}}</small>
+                                    {% endif %}
+                                    {% for error in field.errors %}
+                                    <P style="color: red;">{{error}}</P>
+                                    {% endfor %}
+                                </div>
+                                {% endfor %}
+                                <input class="btn btn-md btn-success btn-block" type="submit" value="Update">
+                                </br>
+                                <a href="/" class="btn btn-md btn-primary btn-block">Cancel</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+ 

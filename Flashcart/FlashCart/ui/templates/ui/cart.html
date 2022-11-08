@@ -1,0 +1,40 @@
+{% extends 'ui/main.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    {% for cartitem in cartitems %}
+    <div class="row justify-content-center">
+        <div class="col-md-2 mt-3 border-left border-top border-bottom" >
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{cartitem.product.product_image.url}}" alt="">
+            </div>
+        </div>
+        <div class="col-md-2 mt-3 border-top border-bottom">
+            <div class="card-body">
+                <h5 class="card-title">Product Name: {{cartitem.product.name}}</h5>
+                <h5 class="card-title">Category: {{cartitem.product.category}}</h5>
+                <p class="card-text">Description: {{cartitem.product.description}}</p>
+                <p class="card-text">Price: {{cartitem.product.price}}</p>
+                <p class="card-text">Qty: {{cartitem.qty}}</p>
+                <p class="card-text">Total: {{cartitem.total}}</p>
+                <p class="card-text">Supplier Name: {{cartitem.product.supplier.profile.name}}</p> 
+                <p class="card-text">City: {{cartitem.product.supplier.profile.city.name}}</p> 
+                <p class="card-text">Phone: {{cartitem.product.supplier.profile.phone}}</p> 
+                <p class="card-text">Address: {{cartitem.product.supplier.profile.addressLine1}}</p> 
+                <p class="card-text">{{cartitem.product.supplier.profile.addressLine2}}</p>
+                <p class="card-text">Pin:{{cartitem.product.supplier.profile.pin}}</p> 
+            </div>
+        </div>
+        <div class="col-md-2 mt-3 d-flex align-items-center border-top border-bottom border-right">
+        <a href="/removefromcart/{{cartitem.id}}/" class="btn btn-danger">Remove From Cart</a>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="row justify-content-center">
+        <div class="col-md-6 mt-3">
+            <a href="/placeorder/" class="btn btn-md btn-primary btn-block">Place Order</a>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br>
+    
+</div>
+{% endblock %}

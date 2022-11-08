@@ -1,0 +1,36 @@
+{% extends 'ui/main.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card" style="width: 25rem;">
+            <img class="card-img-top" src="{{product.product_image.url}}" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Product Name: {{product.name}}</h5>
+              <h5 class="card-title">Category: {{product.category}}</h5>
+              <p class="card-text">Description: {{product.description}}</p>
+              <p class="card-text">Stock: {{product.stock}}</p>
+              <p class="card-text">Price: {{product.price}}</p>
+              <p class="card-text">Supplier: {{product.supplier.profile.name}}</p>
+              <p class="card-text">City: {{product.supplier.profile.city}}</p>
+              <p class="card-text"><small class="text-muted">Added on: {{product.addedon}}</small></p>
+              
+              <div class="panel-body">
+                <form role="form" method="POST">
+                    <fieldset>
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control" placeholder="qty" name="qty" type="number" value="1" min="1" max="{{product.stock}}" autofocus required>
+                        </div>
+                        <input class="btn btn-md btn-success btn-block" type="submit"  value="Add To Cart">
+                        </br>
+                        <a href="/home" class="btn btn-md btn-primary btn-block">Cancel</a>
+                    </fieldset>
+                </form>
+            </div>
+            </div>
+        </div>    
+        
+    </div>
+</div>
+{% endblock %}
