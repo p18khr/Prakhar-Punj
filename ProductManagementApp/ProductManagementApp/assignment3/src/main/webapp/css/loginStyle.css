@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+
+#login-container{
+	height:46.8%;
+	width:60%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid #5f8ddb;
+	
+}
+#login-header{
+	font-weight:bold;
+	color:#221177;
+	background-color:#b8cee5;
+	border: 1px solid #5f8ddb;
+	
+	
+}
+#login-button{
+	text-align:right;
+	background-color:#b8cee5;
+	border: 1px solid #5f8ddb;
+}
+
+#right-corner{
+	text-align:right;
+	
+}
+#user-textbox{
+	width:45%;
+}
+#pass-textbox{
+	width:45%;
+}
+#user{
+	margin-left:10px;
+}
+#pass{
+	margin-left:10px;
+}
+.myTextBox{
+	width:50%;
+}
+.form-body{
+	background-color:aqua;
+}
+
+
+
+
+
+
+
+
+

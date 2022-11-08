@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Student Enrollment Form</title>
+       
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script  src = "controller.js"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-fixed-top navbar-custom">
+              Student Enrollment Form
+        </nav>
+    <div class = "container">
+        <div class = "row">    
+            <div class = "col-sm-5 col-xs-12">
+                <form name="myForm">
+                    <div class = "table-responsive">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h5>Name</h5>
+                                </td>
+                                <td>
+                                    <input type="text" id="Name" onfocusout = "validateName()" name="Name"  maxlength="30">
+                                    <span id="errorName"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Email</h5>
+                                </td>
+                                <td>
+                                    <input type = "text"  onfocusout = "validateEmail()" name="Email" maxlength="40">
+                                    <span id="errorEmail"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Website</h5>
+                                </td>
+                                <td>
+                                    <input type="text"  onfocusout = "validateWebsite()" name="Website" maxlength="40">
+                                    <span id="errorWebsite"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Image Link</h5>
+                                </td>
+                                <td>
+                                    <input type="text"  onfocusout = "validateImageLink()" name="ImageLink">
+                                    <span id="errorImageLink"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Gender</h5>
+                                </td>
+                                <td>
+                                    <br><input type="radio" name="Gender" value="Male"checked> Male<br>
+                                    <input type="radio"  name="Gender" value="Female"> Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Skills
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="skills" value="Java" id="c1"> Java <input type="checkbox" value="HTML" name="skills" id="c2"> HTML <input type="checkbox"  value="CSS" name="skills" id="c3"> CSS
+                                    <span id="errorCheckbox"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="button" id = "add"  onClick = "validateForm()" value="Enroll Student">
+                                    <span id = "errorSubmit"></span>
+                                </td>
+                                <td>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>               
+                </form>
+            </div>
+            <div class = "col-sm-2">
+                <div class="vl">
+                </div>
+            </div>
+        
+            <div class = "col-sm-5 col-xs-12">
+                <h4>Enrolled Students</h4>
+                <div class = "scroll">
+                
+                        <div class = "table-responsive">
+                            <table id="mytable">
+                                <tr style="background-color: #9ACD32;
+                                border : 2px solid #9ACD32;
+                                color:white;">
+                                    <td style="border : 2px solid #9ACD32;">Description</trd>
+                                    <td style="border : 2px solid #9ACD32;">&nbsp;&nbsp;&nbsp;Image</td>
+                                </tr> 
+                            </table>
+                        </div>
+                
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="footer">
+        <div class="container">
+            <p>Copyright 2020-2021 by Fresher Training</p>
+        </div>
+    </div>   
+    </body>
+</html>

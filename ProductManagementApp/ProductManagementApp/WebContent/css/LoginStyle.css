@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+.header{
+	color:#0047AB ; 
+	font-family: Arial, sans-serif ; 
+	background-color:#B9D9EB;
+	padding-top:10px;
+	border-top:0.5px solid #6CB4EE;
+	padding-left:10px;
+	border-bottom:0.5px solid #6CB4EE;
+}
+
+.form{
+	background-color:#F0F8FF;
+	padding:50px;
+}
+
+
+.button{
+	text-align:right; 
+	width:100%; 
+	padding:5px 5px 5px 0px;
+	background-color:#B9D9EB;
+	border-top:0.5px solid #6CB4EE;
+	border-bottom:0.5px solid #6CB4EE;
+}

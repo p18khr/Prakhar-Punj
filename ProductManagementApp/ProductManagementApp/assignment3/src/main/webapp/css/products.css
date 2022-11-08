@@ -1,0 +1,52 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+.spc-btw{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+button{
+	cursor:pointer;
+}
+.logoutButton{
+    margin: 0 1rem;
+}
+
+form{
+    max-width: 25rem;
+}
+.container input{
+    width: 70%;
+    margin-left:  1rem;
+    padding: 0.3rem;
+}
+
+.inpItem{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0 ;
+}
+
+.inpItem label{
+    display: flex;
+    justify-content: space-between;
+    width: 6rem;
+}
+.outputContainer{
+    display: grid;
+    grid-auto-rows: 10rem;
+}
+.outputBox{
+    place-content: center;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 2rem repeat(5,1fr);
+    gap: 0.5rem;
+}
+

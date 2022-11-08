@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+#logout-form{
+	
+	position:fixed;
+	right:20px;
+}
+#header{
+	text-align:center;
+}
+#form-heading{
+	font-weight:bold;
+	position:relative;
+	left:15px;
+	
+}
+#form-body{
+	position:fixed;
+	left:20px;
+}

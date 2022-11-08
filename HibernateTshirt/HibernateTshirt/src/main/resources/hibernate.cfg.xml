@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-configuration>
+   <session-factory>
+
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.MySQL8Dialect
+      </property>
+
+      <property name = "hibernate.connection.driver_class">
+         com.mysql.cj.jdbc.Driver
+      </property>
+
+      <!-- Assume test is the database name -->
+
+      <property name = "hibernate.connection.url">
+         jdbc:mysql://localhost:3306/tshirts </property>
+
+      <property name = "hibernate.connection.username">
+         root
+      </property>
+
+      <property name = "hibernate.connection.password">
+         root
+      </property>
+
+      <property name="connection.pool_size">100</property>
+
+
+      <property name="show_sql">false</property>
+      <property name="hbm2ddl.auto">create</property>
+
+      <mapping class="com.training.nagarro.models.DerivedTshirt" />
+
+   </session-factory>
+</hibernate-configuration>
